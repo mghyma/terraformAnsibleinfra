@@ -13,7 +13,13 @@ Ansible includes a suite of modules for interacting with Azure Resource Manager,
 3.Enter the following command to get Azure SubscriptionID and copy the same to notepad.
 
 az account show
+
 ![azuredisplaysubid](https://github.com/mghyma/terraformAnsibleinfra/assets/128038495/f0f9aea4-433b-4486-a6d1-ed4a2217c61c)
+
+4.Enter the following command by replacing ServicePrincipalName with your desired value and Subscription ID from the previous step.
+
+az ad sp create-for-rbac --name ServicePrincipalName --role Contributor --scopes /subscriptions/<subscriptionid> 
+
 
 
 
