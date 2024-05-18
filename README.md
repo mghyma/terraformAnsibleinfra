@@ -20,6 +20,34 @@ az account show
 
 az ad sp create-for-rbac --name ServicePrincipalName --role Contributor --scopes /subscriptions/<subscriptionid> 
 
+![azureserviceprincipal](https://github.com/mghyma/terraformAnsibleinfra/assets/128038495/e96b7549-45da-414c-b818-ea1edb60d4c9)
+
+Task 2: Configure Ansible in a Linux machine
+To create and provision the resources in Azure with Ansible, we need to have a Linux VM with Ansible configured. In this exercise, you will deploy an Azure Linux VM and configure Ansible on the virtual machine
+
+ 1.In the Azure Cloud shell enter below command to create Azure resource group
+
+  az group create --name AnsibleVM --location eastus
+
+ 2.Create the Azure virtual machine for Ansible.
+
+ az vm create --resource-group AnsibleVM --name AnsibleVM  --image OpenLogic:CentOS:7.7:latest  --admin-username india  --admin-password India@123456
+
+ Replace the <password> with your password.
+
+ 3.Once the deployment is successful, navigate to the resource group and select the VM.
+
+ ![azureVMselect](https://github.com/mghyma/terraformAnsibleinfra/assets/128038495/36b69204-b5a4-4830-9828-b79809ab9006)
+
+ 4.Select Overview and copy the Public IP address.
+
+ ![AnsibleVMPublicIP](https://github.com/mghyma/terraformAnsibleinfra/assets/128038495/387042af-417d-4377-b82d-afdb9cb9477b)
+
+
+
+
+
+
 
 
 
