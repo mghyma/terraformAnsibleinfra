@@ -1,10 +1,14 @@
-title: Automating Infrastructure Deployments in the Cloud with Ansible and Azure Pipelines### What’s covered in this lab
-1What covered in this project
+Overview:
+title: Automating Infrastructure Deployments in the Cloud with Ansible and Azure Pipelines
+1.What covered in this project
  1.	How Ansible can be used to implement Infrastructure as Code (IaC)
  2.	How to automate infrastructure deployments in the Cloud with Ansible and Azure pipelines.# terraformAnsibleinfra
+    
 2.	### Setting up the Environment
-### Task 1: Create an Azure service principal with Azure CLI
-Ansible includes a suite of modules for interacting with Azure Resource Manager, giving you the tools to easily create and orchestrate infrastructure on the Microsoft Azure Cloud. Using the Azure Resource Manager modules requires authenticating with the Azure API. In this lab, you will use Azure service principal for authentication.
+   ### Task 1: Create an Azure service principal with Azure CLI
+    Ansible includes a suite of modules for interacting with Azure Resource Manager, giving you the tools to easily create and 
+    orchestrate infrastructure on the Microsoft Azure Cloud. Using the Azure Resource Manager modules requires authenticating with the 
+    Azure API. In this lab, you will use Azure service principal for authentication.
 
 1. Login to the [Azure portal](https://portal.azure.com).
 
@@ -45,20 +49,20 @@ To create and provision the resources in Azure with Ansible, we need to have a L
 
 5. Run the following commands to configure Ansible on Centos:
     #!/bin/bash
-
- # Update all packages that have available updates.
+   
+  Update all packages that have available updates.
  sudo yum update -y
 
- # Install Python 3 and pip.
+  Install Python 3 and pip.
  sudo yum install -y python3-pip
 
- # Upgrade pip3.
+  Upgrade pip3.
  sudo pip3 install --upgrade pip
 
- # Install Ansible.
+  Install Ansible.
  pip3 install "ansible==2.9.17"
 
- # Install Ansible azure_rm module for interacting with Azure.
+  Install Ansible azure_rm module for interacting with Azure.
  pip3 install ansible[azure]
  
  6.Now we must create a directory named .azure in the home directory and a credentials file under it. This local credentials file is to provide credentials to Ansible. Type the following commands to create them.
