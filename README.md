@@ -73,11 +73,11 @@ nano ~/.azure/credentials
 
 subscription_id=<your-Azure-subscription_id>
 
-client_id=<azure service-principal-appid>
+client_id=<your-Azure-client_id>
 
-secret=<azure service-principal-password>
+secret=<your-Azure-secret>
 
-tenant=<azure serviceprincipal-tenant>
+tenant=<your-Azure-tenant>
 
 8.Run nano ~/.bashrc and insert the following text into .bashrc. Press Ctrl+O to save the file and Ctrl+X to exit from the text editor.
 
@@ -102,6 +102,28 @@ ssh-copy-id india@10.50.1.4
 cat ~/.ssh/id_rsa
 
 ![sshprivatekey](https://github.com/mghyma/terraformAnsibleinfra/assets/128038495/8a95f442-d208-414b-b4b7-7ad895416649)
+
+Task 3: Create a SSH Service Connection in Azure DevOps
+To connect and run playbooks through Ansible VM in Azure pipelines, we need to have a connection between Azure DevOps and Ansible VM. This service connection provides authentication to Ansible.
+1.Navigate to Project Settings --> Service Connections. Select Create service connection.
+
+![sshendpoint](https://github.com/mghyma/terraformAnsibleinfra/assets/128038495/de6e545d-1e92-4cfe-bc07-c243da10fc8f)
+
+2.the project we created above using https://dev.azure.com/mgskrish/mediawikipro1
+
+3.New Service Connection windows select SSH and click Next
+
+![SSHSelect](https://github.com/mghyma/terraformAnsibleinfra/assets/128038495/531c17d1-42d1-409c-bda0-64b84e8e5acf)
+
+4. New SSH service connection window provide the required details and click Save to save the connection.
+
+![SSHServiceConnection](https://github.com/mghyma/terraformAnsibleinfra/assets/128038495/3b3fbd2c-29eb-4db7-aef6-5ae91ec3f607)
+
+
+
+
+
+
 
 
 
