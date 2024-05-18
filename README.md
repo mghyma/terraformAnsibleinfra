@@ -43,6 +43,69 @@ To create and provision the resources in Azure with Ansible, we need to have a L
 
  ![AnsibleVMPublicIP](https://github.com/mghyma/terraformAnsibleinfra/assets/128038495/387042af-417d-4377-b82d-afdb9cb9477b)
 
+5. Run the following commands to configure Ansible on Centos:
+    #!/bin/bash
+
+ # Update all packages that have available updates.
+ sudo yum update -y
+
+ # Install Python 3 and pip.
+ sudo yum install -y python3-pip
+
+ # Upgrade pip3.
+ sudo pip3 install --upgrade pip
+
+ # Install Ansible.
+ pip3 install "ansible==2.9.17"
+
+ # Install Ansible azure_rm module for interacting with Azure.
+ pip3 install ansible[azure]
+ 
+ 6.Now we must create a directory named .azure in the home directory and a credentials file under it. This local credentials file is to provide credentials to Ansible. Type the following commands to create them.
+
+mkdir ~/.azure
+
+nano ~/.azure/credentials
+
+7.Insert the following lines into the credentials file. Replace the placeholders with the information from the service principal details you copied in the previuous task. Press Ctrl+ to save the file and Ctrl+X to exit from the text editor.
+
+[default]
+
+subscription_id=<your-Azure-subscription_id>
+
+client_id=<azure service-principal-appid>
+
+secret=<azure service-principal-password>
+
+tenant=<azure serviceprincipal-tenant>
+
+8.Run nano ~/.bashrc and insert the following text into .bashrc. Press Ctrl+O to save the file and Ctrl+X to exit from the text editor.
+
+PATH=$PATH:$HOME/.local/bin:$HOME/bin
+
+9.Ansible is an agentless architecture based automation tool . Only it needs ssh authentication using Ansible Control Machine private/public key pair. Now let us create a pair of private and public keys. Run the following command to generate a private/public key pair for ssh and to install the public key in the local machine.
+
+ssh-keygen -t rsa
+
+chmod 755 ~/.ssh
+
+touch ~/.ssh/authorized_keys
+
+chmod 644 ~/.ssh/authorized_keys
+
+ssh-copy-id india@10.50.1.4
+
+![sshkeys](https://github.com/mghyma/terraformAnsibleinfra/assets/128038495/284456eb-c38c-421d-a32d-747fa22e87a6)
+
+10.In the next task, you need SSH private key to created SSH endpoint in Azure DevOps service. Run the following command to get the private key. Copy the private key to notepad.
+
+cat ~/.ssh/id_rsa
+
+![sshprivatekey](https://github.com/mghyma/terraformAnsibleinfra/assets/128038495/8a95f442-d208-414b-b4b7-7ad895416649)
+
+
+
+
 
 
 
