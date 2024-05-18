@@ -75,9 +75,9 @@ subscription_id=<your-Azure-subscription_id>
 
 client_id=<your-Azure-client_id>
 
-secret=<your-Azure-secret>
+secret_id=<your-Azure-secret_id>
 
-tenant=<your-Azure-tenant>
+tenant_id=<your-Azure-tenant_id>
 
 8.Run nano ~/.bashrc and insert the following text into .bashrc. Press Ctrl+O to save the file and Ctrl+X to exit from the text editor.
 
@@ -118,6 +118,8 @@ To connect and run playbooks through Ansible VM in Azure pipelines, we need to h
 4. New SSH service connection window provide the required details and click Save to save the connection.
 
 ![SSHServiceConnection](https://github.com/mghyma/terraformAnsibleinfra/assets/128038495/3b3fbd2c-29eb-4db7-aef6-5ae91ec3f607)
+
+
 
 
 
