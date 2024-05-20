@@ -130,8 +130,8 @@ To connect and run playbooks through Ansible VM in Azure pipelines, we need to h
 
 ![SSHServiceConnection](https://github.com/mghyma/terraformAnsibleinfra/assets/128038495/3b3fbd2c-29eb-4db7-aef6-5ae91ec3f607)
 
-the Terraform file (IaC) in your Source code
-You will examine the terraform file which helps you to provision the Azure Resources required to deploy.
+1.the Terraform file (IaC) in your Source code
+You will the Azure Resources required to deploy.
 
 1.Select Repos.
 ![terraformrepo1](https://github.com/mghyma/terraformAnsibleinfra/assets/128038495/5c9d99e8-286a-4816-92a9-74a93c755e96)
@@ -141,6 +141,18 @@ You will examine the terraform file which helps you to provision the Azure Resou
 ![terraformmaintf](https://github.com/mghyma/terraformAnsibleinfra/assets/128038495/5f112fd6-eed4-46b1-9dad-807d878e5a4e)
 
 main.tf is a terraform configuration file. Terraform uses its own file format, called HCL (Hashicorp Configuration Language).
+
+2.Deploy resources using Terraform (IaC) in Azure CD pipeline
+you will create azure resources using Terraform as part of your deployment(CD) pipeline and deploy the PartsUnlimited application to the App service provisioned by Terraform.
+
+1.Navigate to Pipelines --> Releases. Select Terraform-CD and click Edit.
+
+![terraformrelease](https://github.com/mghyma/terraformAnsibleinfra/assets/128038495/36ca8451-457f-4711-a596-d712d09aa6f4)
+
+2.Select Dev stage and click View stage tasks to view the pipeline tasks.
+![terraformCD](https://github.com/mghyma/terraformAnsibleinfra/assets/128038495/d589e6c5-3d48-413e-a289-a3cb1e02f5d9)
+
+
 
 
 
