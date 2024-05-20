@@ -1,1 +1,7 @@
+# This will create VM in AZURE cloud
 
+Testing steps:
+
+* #terraform init
+* #terraform plan
+* #terraform apply
