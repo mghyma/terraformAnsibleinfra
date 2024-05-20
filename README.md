@@ -136,7 +136,7 @@ You will the Azure Resources required to deploy.
 1.Select Repos.
 ![terraformrepo1](https://github.com/mghyma/terraformAnsibleinfra/assets/128038495/5c9d99e8-286a-4816-92a9-74a93c755e96)
 
-2.Select the webapp.tf file under the Terraform folder. Go through the code.
+2.Select the main.tf file under the Terraform folder. Go through the code.
 
 ![terraformmaintf](https://github.com/mghyma/terraformAnsibleinfra/assets/128038495/5f112fd6-eed4-46b1-9dad-807d878e5a4e)
 
