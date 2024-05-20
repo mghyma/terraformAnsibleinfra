@@ -152,6 +152,9 @@ you will create azure resources using Terraform as part of your deployment(CD) p
 2.Select Dev stage and click View stage tasks to view the pipeline tasks.
 ![terraformCD](https://github.com/mghyma/terraformAnsibleinfra/assets/128038495/d589e6c5-3d48-413e-a289-a3cb1e02f5d9)
 
+more information on Terraform remote state click https://dev.azure.com/mgskrish/mediawikipro1
+
+
 
 
 
