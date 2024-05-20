@@ -130,6 +130,22 @@ To connect and run playbooks through Ansible VM in Azure pipelines, we need to h
 
 ![SSHServiceConnection](https://github.com/mghyma/terraformAnsibleinfra/assets/128038495/3b3fbd2c-29eb-4db7-aef6-5ae91ec3f607)
 
+the Terraform file (IaC) in your Source code
+You will examine the terraform file which helps you to provision the Azure Resources required to deploy.
+
+1.Select Repos.
+![terraformrepo1](https://github.com/mghyma/terraformAnsibleinfra/assets/128038495/5c9d99e8-286a-4816-92a9-74a93c755e96)
+
+2.Select the webapp.tf file under the Terraform folder. Go through the code.
+
+![terraformmaintf](https://github.com/mghyma/terraformAnsibleinfra/assets/128038495/5f112fd6-eed4-46b1-9dad-807d878e5a4e)
+
+main.tf is a terraform configuration file. Terraform uses its own file format, called HCL (Hashicorp Configuration Language).
+
+
+
+
+
 
 
 
